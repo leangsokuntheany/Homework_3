@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <button id="change" onclick="Change() "> Hide </button>
+    </div>
+    <div id="box">
+        Subject1 : <input type="number" id="Num1"> <br>
+        Subject2 : <input type="number" id="Num2"><br>
+        Subject3 : <input type="number" id="Num3"> <br>
+        Subject4 : <input type="number" id="Num4"> <br>
+        Subject5 : <input type="number" id="Num5"> <br>
+        Subject6 : <input type="number" id="Num6"> <br>
+        <button onclick="Cal()">Calculate</button>
+        <p id="Result1"></p>
+        <p id="Result2"></p>
+    </div>
+    <script>
+        box.style.width = '400px';
+        box.style.border = '1px solid black';
+        box.style.height = '300px';
+        box.style.borderRadius = '10px';
+        box.style.fontSize = '23px';
+        box.style.padding = '10px';
+        box.style.margin = '10px 0px';
+        box.style.backgroundColor = 'pink';
+        function Cal() {
+            let Num1 = document.getElementById('Num1').value;
+            let Num2 = document.getElementById('Num2').value;
+            let Num3 = document.getElementById('Num3').value;
+            let Num4 = document.getElementById('Num4').value;
+            let Num5 = document.getElementById('Num5').value;
+            let Num6 = document.getElementById('Num6').value;
+            let a = Number(Num1);
+            let b = Number(Num2);
+            let c = Number(Num2);
+            let d = Number(Num2);
+            let e = Number(Num2);
+            let f = Number(Num2);
+            let g = a + b + c + d + e + f;
+            let h = g / 6;
+            document.getElementById('Result1').innerText = 'Result is : ' + h;
+            console.log(typeof (h));
+            if (h >= 80 && h < 95) {
+                document.getElementById('Result2').innerText = 'Grade : A';
+            }
+            else if (h >= 70 && h < 79) {
+                document.getElementById('Result2').innerText = 'Grade : B';
+            }
+            else if (h >= 60 && h <= 69) {
+                Document.getElementById('Result2').innerText = 'Grade : C'
+            }
+            else {
+                Document.getElementById('Result2').innerText = 'fail';
+            }
+
+        }
+        function Change(){
+           change = document.getElementById('change');
+           box = document.getElementById('box');
+            if( box.style.display == 'block'){
+                change.innerText = 'Show';
+                box.style.display = 'none';
+            }
+            else{
+                change.innerText = 'Hide';
+                box.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+
+</html>
